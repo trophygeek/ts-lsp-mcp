@@ -146,6 +146,22 @@ Or in `.mcp.json` at your project root (`--root` can then be omitted, since cwd 
 }
 ```
 
+or (exclude the root for Antigravity IDE 2.1+)
+
+```json
+{
+  "servers": {
+    "ts-lsp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/abs/path/to/ts-lsp-mcp/dist/index.js"
+      ]
+    }
+  }
+}
+```
+
 ### Other MCP hosts
 
 Any host that supports stdio MCP servers works the same way: configure the command as `node /abs/path/to/ts-lsp-mcp/dist/index.js --root <projectDir>`. Consult your host's documentation for where its `mcp.json` (or equivalent) lives.
