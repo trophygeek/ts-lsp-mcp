@@ -43,13 +43,13 @@ And what it deliberately does not do: multiple languages, multiple roots per ins
 
 Use ts-lsp-mcp when all of these hold:
 
-1. The project is plain TypeScript/JavaScript (`.ts/.tsx/.js/.jsx`) and can adopt TypeScript 7.
+1. The project is TypeScript/JavaScript (`.ts/.tsx/.js/.jsx`) and can adopt TypeScript 7.
 2. The agent's failure mode you care about is navigation — answering "who calls this", "what type is this", "does this still type-check" from grep and guesswork.
 3. You want those answers from the compiler without giving the agent a semantic write path.
 
 Reach for something else when: the repo is polyglot (lsmcp, agent-lsp, or the mcp-language-server fork), you want semantic refactoring tools (Serena), you're stuck on TS ≤ 6 or need Vue/Svelte/Astro support (any tsserver-based bridge), or your host already provides equivalent built-in code intelligence.
 
-Companion project: [ts-header-mcp](../ts-header-mcp) solves the adjacent problem — cheap whole-file/project *orientation* via header-style signature listings. The two compose: headers to find the right place, this server for precise questions once there.
+Companion project: [ts-header](../ts-header) solves the adjacent problem — cheap whole-file/project *orientation* via header-style signature listings. The two compose: headers to find the right place, this server for precise questions once there.
 
 ## Tools
 
